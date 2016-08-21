@@ -1,0 +1,10 @@
+controller:(php file)
+1.	get data from html
+2.	use which model to deal and get result;
+3.	decide which file(html) to show!
+
+model:
+1.	inner logic (generate data from the command of controller)
+
+view:
+1.	html/css view (generally, do not visit this file directly, use it from controller~)
