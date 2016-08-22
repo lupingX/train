@@ -8,3 +8,9 @@ model:
 
 view:
 1.	html/css view (generally, do not visit this file directly, use it from controller~)
+
+
+
+1. i dont know how load and autoload work in framework.class.php
+2. header (php)?
+3. exit() in core controller

@@ -32,6 +32,7 @@ class Framework{
 		 define ("LIB_PATH",FRAME_PATH."libraries".DS);
 		 define ("PUB_PATH",ROOT."public".DS);
 
+
 		 //get p c a ,index.php?p=admin$c=goods$a=add GoodsController excute Add function;
 		 define ("PLATFORM",isset($_GET['P'])?  $_GET['p']:	"admin");
 		 define ("CONTROLLER", isset($_GET['c'])? $_GET['c']: 	"Index");
@@ -40,6 +41,12 @@ class Framework{
 		 //get current concroller and view：
 		 define ("CUR_CONTROLLER_PATH",CONTROLLER_PANTH.PLATFORM.DS);
 		 define ("CUR_VIEW_PATH",VIEW_PATH.PLATFORM.DS);
+		 $GLOBALS['config']=include CONFIG_PATH."config.php";
+
+
+		 include CORE_PAHT."Model.class.php";
+		 include CORE_PAHT."Controller.class.php";
+		 include DB_PATH."Mysql.class.php";
 	} 
 	/*
 	this function is to dispatch al lthe action (inilize obj and call for action)
@@ -55,14 +62,14 @@ class Framework{
 		spl_autoload_register('self::load');
 	}
 	private static function load($className){
-		var_dump($className);
+		// var_dump($className);
 		if(substr($className, -10)=="Controller"){
 			include CUR_CONTROLLER_PATH."{$className}.class.php";
-			echo CUR_CONTROLLER_PATH."{$className}.class.php";
+			// echo CUR_CONTROLLER_PATH."{$className}.class.php";
 
 		}else if(substr($className, -5)=="Model"){
 			include MODEL_PATH."{$className}.class.php";
-			echo MODEL_PATH."{$className}.class.php";
+			// echo MODEL_PATH."{$className}.class.php";
 		}else{
 			//...
 		}
