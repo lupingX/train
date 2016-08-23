@@ -12,9 +12,9 @@ class IndexController extends Controller{
 	}
 	public function mainAction(){
 		// echo "123";
-		$admins = new AdminModel("shop");
+		$admins = new AdminModel("admin");
 		$admins ->getAdmins();
-		var_dump($admins);
+		// var_dump($admins);
 		include CUR_VIEW_PATH."main.html";
 	}
 	public function menuAction(){
