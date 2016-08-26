@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Controller{
+class IndexController extends BaseController{
 	//indexController in admin;
 	public function indexAction(){
 		// echo "123";
@@ -12,8 +12,8 @@ class IndexController extends Controller{
 	}
 	public function mainAction(){
 		// echo "123";
-		$admins = new AdminModel("admin");
-		$admins ->getAdmins();
+		$adminModel = new AdminModel("admin");
+		$admins=$adminModel ->getAdmins();
 		// var_dump($admins);
 		include CUR_VIEW_PATH."main.html";
 	}

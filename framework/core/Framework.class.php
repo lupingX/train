@@ -47,6 +47,8 @@ class Framework{
 		 include CORE_PAHT."Model.class.php";
 		 include CORE_PAHT."Controller.class.php";
 		 include DB_PATH."Mysql.class.php";
+
+		 session_start();
 	} 
 	/*
 	this function is to dispatch al lthe action (inilize obj and call for action)
