@@ -5,7 +5,7 @@ class Controller{
 		if($wait ==0){
 			header("Location:$url");
 		}else{
-			include "CUR_VIEW_PATH"."message.html";
+			include CUR_VIEW_PATH."message.html";
 		}
 		exit();
 	}
