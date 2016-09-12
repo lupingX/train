@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>SHOP 管理中心 - 商品分类 </title>
+<title>SHOP center - category list </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="application/views/admin/styles/general.css" rel="stylesheet" type="text/css" />
 <link href="application/views/admin/styles/main.css" rel="stylesheet" type="text/css" />
@@ -9,8 +9,8 @@
 <body>
 
 <h1>
-<span class="action-span"><a href="index.php?p=admin&c=Category&a=add">添加分类</a></span>
-<span class="action-span1"><a href="index.php?p=admin&c=index&a=index">SHOP 管理中心</a> </span><span id="search_id" class="action-span1"> - 商品分类 </span>
+<span class="action-span"><a href="index.php?p=admin&c=Category&a=add">add</a></span>
+<span class="action-span1"><a href="index.php?p=admin&c=index&a=index">SHOP center</a> </span><span id="search_id" class="action-span1"> - category list </span>
 <div style="clear:both"></div>
 </h1>
 
@@ -20,14 +20,14 @@
 		<table width="100%" cellspacing="1" cellpadding="2" id="list-table">
 			<tbody>
 				<tr>
-					<th>分类名称</th>
-					<th>商品数量</th>
-					<th>数量单位</th>
-					<th>导航栏</th>
-					<th>是否显示</th>
-					<th>价格分级</th>
-					<th>排序</th>
-					<th>操作</th>
+					<th>name</th>
+					<th>amount</th>
+					<th>unit</th>
+					<th>navigator</th>
+					<th>show?</th>
+					<th>price</th>
+					<th>sort_order</th>
+					<th>operation</th>
 				</tr>
         <?php  foreach ($cats as $cat) :?>
 
@@ -46,8 +46,8 @@
 					<td width="10%" align="right"><span onclick="listTable.edit(this, 'edit_sort_order', 1)" title="点击修改内容" style=""><?php  echo $cat['sort_order'] ; ?></span></td>
 					<td width="24%" align="center">
 						<!-- <a href="category.php?act=move&amp;cat_id=1">转移商品</a> | -->
-						<a href="index.php?p=admin&c=Category&a=edit&cat_id=<?php echo $cat['cat_id']; ?> ">编辑</a> |
-						<a href="index.php?p=admin&c=Category&a=delete&cat_id=<?php echo $cat['cat_id']; ?>">移除</a>
+						<a href="index.php?p=admin&c=Category&a=edit&cat_id=<?php echo $cat['cat_id']; ?> ">Edit</a> |
+						<a href="index.php?p=admin&c=Category&a=delete&cat_id=<?php echo $cat['cat_id']; ?>">Delete</a>
 					</td>
 				</tr>
       <?php  endforeach; ?>
